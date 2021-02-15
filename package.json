@@ -1,7 +1,7 @@
 {
-  "name": "gatsby-starter-julia",
+  "name": "leire",
   "private": true,
-  "description": "A minimal blog template built with Gatsby",
+  "description": "Clon del Gatsby starter Julia",
   "version": "0.1.0",
   "author": "Niklas Metje <hi@niklasmtj.de>",
   "dependencies": {

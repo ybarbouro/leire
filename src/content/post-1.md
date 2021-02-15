@@ -1,5 +1,5 @@
 ---
-title: "This is such a long headline and i dont know what to write so i keep continiung"
+title: "Lo que intento hacer es cambiar el estilo del sitio y los contenidos"
 date: "2019-03-17"
 draft: false
 path: "/blog/example-title"
@@ -40,6 +40,3 @@ console.log(foo);
 | Hello | World |
 |-------|------ |
 | Foo   | Bar   |
-
-
-
