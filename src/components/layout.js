@@ -12,10 +12,10 @@ import styled from "@emotion/styled"
 
 import Header from "./header"
 import "./layout.css"
+import "./grid.css"
 
 const Content = styled.div`
   margin: 0 auto;
-  max-width: 860px;
   padding: 0 1.0875rem 1rem;
   padding-top: 0;
 `
@@ -45,7 +45,7 @@ const Layout = ({ children }) => (
         <Header siteTitle={data.site.siteMetadata.title} />
         <Content>
           <main>{children}</main>
-          <Footer>
+        <Footer>
             <p>
             © {new Date().getFullYear()}, Built with
             {` `}

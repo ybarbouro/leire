@@ -8,8 +8,7 @@ import SEO from "../components/seo"
 
 const Content = styled.div`
   margin: 0 auto;
-  max-width: 860px;
-  padding: 1.45rem 1.0875rem;
+  width: 100%;
 `
 
 const ArticleDate = styled.h5`
@@ -18,13 +17,15 @@ const ArticleDate = styled.h5`
 `
 
 const MarkerHeader = styled.h3`
+  font-family: 'Open Sans';
+  color: #1a1a1a;
   display: inline;
   border-radius: 1em 0 1em 0;
-  background-image: linear-gradient(
-    -100deg,
-    rgba(255, 250, 150, 0.15),
-    rgba(255, 250, 150, 0.8) 100%,
-    rgba(255, 250, 150, 0.25)
+  //background-image: linear-gradient(
+  //  -100deg,
+  //  rgba(255, 250, 150, 0.15),
+  //  rgba(255, 250, 150, 0.8) 100%,
+  //  rgba(255, 250, 150, 0.25)
   );
 `
 
@@ -37,8 +38,10 @@ const IndexPage = ({ data }) => {
   return (
     <Layout>
       <SEO title="Blog" />
+
       <Content>
-        <h1>Blog</h1>
+      <div class="grids">
+
         {data.allMarkdownRemark.edges
           .filter(({ node }) => {
             const rawDate = node.frontmatter.rawDate
@@ -46,7 +49,7 @@ const IndexPage = ({ data }) => {
             return date < new Date()
           })
           .map(({ node }) => (
-            <div key={node.id}>
+            <div class="item" key={node.id}>
               <Link
                 to={node.frontmatter.path}
                 css={css`
@@ -63,6 +66,7 @@ const IndexPage = ({ data }) => {
               <p>{node.excerpt}</p>
             </div>
           ))}
+          </div>
       </Content>
     </Layout>
   )
